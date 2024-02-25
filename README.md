@@ -6,7 +6,7 @@ Class: Machine Learning
 Professor: 顏士淨 (Shi-Jim Yen)   
 
 ## Introduction 
-Rocket League Rank Classifier is my final project for the 2023 Machine Learning class. The objective for this project is to determine what factors influence a player's rank in the vehicular soccer game Rocket League. The three machine learning algorithms, Logistic Regression, Random Forest, and SVC, were trained and tested with data that was collected from the [Rocket League Tracker](https://rocketleague.tracker.network/) website. The scraping, preprocessing, and training of ML models were all done manually and results are presented in the "410821337_Rocket League Rank Classifier.pptx". 
+Rocket League Rank Classifier is my final project for the 2023 Machine Learning class. The objective for this project is to determine what factors influence a player's rank in the vehicular soccer game Rocket League. The three machine learning algorithms, Logistic Regression, Random Forest, and SVC, were trained and tested with data that was collected from the [Rocket League Tracker](https://rocketleague.tracker.network/) website. The scraping, preprocessing, and training of ML models were all done manually and results are presented in my [final presentation](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/blob/master/410821337_Rocket%20League%20Rank%20Classifier.pptx)
 
 ## Method
 1. Data Collection - scrape 1v1 Duel data using a Python script
