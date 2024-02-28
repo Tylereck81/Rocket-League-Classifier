@@ -15,7 +15,7 @@ Rocket League Rank Classifier is my final project for the 2023 Machine Learning 
 4. Testing - comparing accuracies after multiple changes in configurations
      
 ## Data Collection 
-A Rocket League player's stastics are publicly tracked and displayed on the [Rocket League Tracker](https://rocketleague.tracker.network/) website. By using the scrape.py python script, these 11 features were collected to train the ML models:
+A Rocket League player's stastics are publicly tracked and displayed on the [Rocket League Tracker](https://rocketleague.tracker.network/) website. By using the [scrape.py](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/blob/master/Scraped%20Data/scrape.py) python script, these 11 features were collected to train the ML models:
 
 1. Goals/Game – goals per game
 2. Shots/Game – shots per game
@@ -30,4 +30,33 @@ A Rocket League player's stastics are publicly tracked and displayed on the [Roc
 11. Total Saves – lifetime saves 
 
 ![rank 2](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/assets/68008817/d67c3de3-04c9-4b93-b236-244471cac638)
+
+## Preprocessing 
+The collected data was then cleaned to remove all records that had missing data. By using the [clean.py](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/blob/master/Clean%20Data/clean.py) python script, all the records that had rows filled with 0's or 1's (which indicates that the data was missing from the website) was completed removed. 
+
+### Before Cleaning
+![nonclean](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/assets/68008817/c2347cd4-3593-408f-b72f-f1fe861f16f0)
+
+### After Cleaning 
+![clean](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/assets/68008817/143e513f-94cd-4d29-97ae-bc2bffeff3d4)
+    
+Lastly, all of the clean data from each of the three Rocket League ranks (SuperSonic Legend, Grand Champion, and Champion) was combined into the single csv file [combined.csv](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/blob/master/Combined%20Data/combined.csv) using the [combine.py](https://github.com/Tylereck81/Rocket-League-Rank-Classifier/blob/master/Combined%20Data/combine.py) python script. 
+
+## Setup 
+This project already has the cleaned and combined data that is used to train the ML models, so in order to run the programs locally, follow the necessary steps below:    
+
+1.  Download and install [Anaconda](https://docs.anaconda.com/anaconda/install/index.html) - Python 3.5 or 3.6
+     
+2.   Create and activate an environment, and download the necessary packages below using "conda install".
+      
+   * Pandas
+   * Numpy
+   * Selenium
+   * BeautifulSoup
+
+3. For Logistic Regression, run "python LR.py" in the environment.
+4. For Random Forest, run "python RF.py" in the environment.
+5. For Support Vector Classifier, run "python SVC.py" in the environment.
+
+
 
